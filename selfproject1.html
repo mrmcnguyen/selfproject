@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Self Learning Submission Task</title>
+</head>
+<body>
+
+<h1>Self Learning Submission Task</h1>
+
+<h2>Javascript Program</h2>
+
+<p>By Haeseong(Kevin) Lee</p>
+
+<p>Program Description: This program will generate a random number between 1 and 10 inclusive.
+  The program will keep prompting you to guess until you guess the correct answer.
+<br>
+Copied Program Description:
+<br>
+</p>
+
+<p style="margin-left:10%; margin-right:10%;">
+  <i>I will develop a webpage
+    with JavaScript for a number guessing game which will consist of numbers between 1 and 10.
+    Each time the program will select a random number between 1 and 10, and when a user guesses a number,
+    the program will output if the target number is higher or lower than the user's guess.
+    This will repeat until the user gets is correct.</i>
+
+</p>
+
+<br>
+
+
+<button onclick="myFunction()">Press to Play!</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  let msg;
+  let num;
+  //Generates a random integer between 1 and 10
+  num = Math.floor(Math.random() * 11);
+  let userGuess = prompt("Guess a number between 1 and 10 inclusive: ");
+  if (userGuess == null || userGuess == '') {;
+    alert('You exited the program, or provided an incorrect input.');
+    return;
+  }
+  while (userGuess != num){;
+    if (userGuess == null) {;
+      alert('You exited the program, or provided an incorrect input.')
+      return;}
+    alert('Incorrect! Try again.');
+    userGuess = prompt("Guess a number between 1 and 10 inclusive: ");
+  }
+  alert('Correct!');
+  msg = `You guessed the correct number. The number was ${num}. `
+  document.getElementById("demo").innerHTML = msg;
+
+}
+</script>
+
+</body>
+</html>
