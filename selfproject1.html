@@ -50,7 +50,12 @@ function myFunction() {
     if (userGuess == null) {;
       alert('You exited the program, or provided an incorrect input.')
       return;}
-    alert('Incorrect! Try again.');
+  if (userGuess > num){;
+      alert('Incorrect. The target number is lower than your guess!')
+  }
+  else {
+      alert('Incorrect. The target number is higher than your guess!')
+  }
     userGuess = prompt("Guess a number between 1 and 10 inclusive: ");
   }
   alert('Correct!');
